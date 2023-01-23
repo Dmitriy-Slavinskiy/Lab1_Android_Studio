@@ -25,7 +25,7 @@ import com.example.lab_1_Slavinskyi.ui.theme.graySurface
 import com.example.lab_1_Slavinskyi.ui.theme.typography
 
 @Composable
-fun PuppyListItem(animal: Animal, navigateToProfile: (Animal) -> Unit,) {
+fun AnimalListItem(animal: Animal, navigateToProfile: (Animal) -> Unit,) {
     Card(
         modifier = Modifier
             .padding(horizontal = 8.dp, vertical = 8.dp)
@@ -35,7 +35,7 @@ fun PuppyListItem(animal: Animal, navigateToProfile: (Animal) -> Unit,) {
         shape = RoundedCornerShape(corner = CornerSize(16.dp)),
     ) {
         Row(Modifier.clickable { navigateToProfile(animal) }) {
-            PuppyImage(animal)
+            AnimalImage(animal)
             Column(
                 modifier = Modifier
                     .padding(8.dp)
@@ -50,9 +50,9 @@ fun PuppyListItem(animal: Animal, navigateToProfile: (Animal) -> Unit,) {
 }
 
 @Composable
-private fun PuppyImage(animal: Animal) {
+private fun AnimalImage(animal: Animal) {
     Image(
-        painter = painterResource(id = animal.puppyImageId),
+        painter = painterResource(id = animal.animalImageId),
         contentDescription = null,
         contentScale = ContentScale.Crop,
         modifier = Modifier
@@ -66,5 +66,5 @@ private fun PuppyImage(animal: Animal) {
 @Composable
 fun PreviewPuppyItem() {
     val puppy = DataProvider.animal
-    PuppyListItem(animal = puppy, navigateToProfile = {})
+    AnimalListItem(animal = puppy, navigateToProfile = {})
 }

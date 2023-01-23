@@ -8,5 +8,5 @@ data class Animal(
     val sex: String,
     val age: Int,
     val description: String,
-    val puppyImageId: Int = 0
+    val animalImageId: Int = 0
 ) : Serializable

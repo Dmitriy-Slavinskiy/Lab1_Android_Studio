@@ -82,7 +82,7 @@ private fun ProfileHeader(
             .heightIn(max = containerHeight / 2)
             .fillMaxWidth()
             .padding(top = offsetDp),
-        painter = painterResource(id = animal.puppyImageId),
+        painter = painterResource(id = animal.animalImageId),
         contentScale = ContentScale.Crop,
         contentDescription = null
     )

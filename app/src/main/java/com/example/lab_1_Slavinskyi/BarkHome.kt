@@ -18,7 +18,7 @@ fun BarkHomeContent(navigateToProfile: (Animal) -> Unit) {
         items(
             items = puppies,
             itemContent = {
-                PuppyListItem(animal = it, navigateToProfile)
+                AnimalListItem(animal = it, navigateToProfile)
             }
         )
     }
